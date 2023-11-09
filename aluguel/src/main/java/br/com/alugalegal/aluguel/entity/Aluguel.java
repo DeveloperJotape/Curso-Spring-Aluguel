@@ -1,6 +1,7 @@
 package br.com.alugalegal.aluguel.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ public class Aluguel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Cliente cliente;
-	private Veiculo veiculo;
+	private List<Veiculo> veiculo;
 	private Pagamento pagamento;
 	private Date dataAluguel;
 	private Date dataDevolucao;
@@ -23,7 +24,7 @@ public class Aluguel {
 		super();
 	}
 
-	public Aluguel(Long id, Cliente cliente, Veiculo veiculo, Pagamento pagamento, Date dataAluguel,
+	public Aluguel(Long id, Cliente cliente, List<Veiculo> veiculo, Pagamento pagamento, Date dataAluguel,
 			Date dataDevolucao) {
 		super();
 		this.id = id;
@@ -50,11 +51,11 @@ public class Aluguel {
 		this.cliente = cliente;
 	}
 
-	public Veiculo getVeiculo() {
+	public List<Veiculo> getVeiculo() {
 		return veiculo;
 	}
 
-	public void setVeiculo(Veiculo veiculo) {
+	public void setVeiculo(List<Veiculo> veiculo) {
 		this.veiculo = veiculo;
 	}
 
