@@ -15,7 +15,7 @@ public class Aluguel {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Cliente cliente;
-	private List<Veiculo> veiculo;
+	private List<Veiculo> veiculos;
 	private Pagamento pagamento;
 	private Date dataAluguel;
 	private Date dataDevolucao;
@@ -24,12 +24,12 @@ public class Aluguel {
 		super();
 	}
 
-	public Aluguel(Long id, Cliente cliente, List<Veiculo> veiculo, Pagamento pagamento, Date dataAluguel,
+	public Aluguel(Long id, Cliente cliente, List<Veiculo> veiculos, Pagamento pagamento, Date dataAluguel,
 			Date dataDevolucao) {
 		super();
 		this.id = id;
 		this.cliente = cliente;
-		this.veiculo = veiculo;
+		this.veiculos = veiculos;
 		this.pagamento = pagamento;
 		this.dataAluguel = dataAluguel;
 		this.dataDevolucao = dataDevolucao;
@@ -51,12 +51,12 @@ public class Aluguel {
 		this.cliente = cliente;
 	}
 
-	public List<Veiculo> getVeiculo() {
-		return veiculo;
+	public List<Veiculo> getVeiculos() {
+		return veiculos;
 	}
 
-	public void setVeiculo(List<Veiculo> veiculo) {
-		this.veiculo = veiculo;
+	public void setVeiculos(List<Veiculo> veiculos) {
+		this.veiculos = veiculos;
 	}
 
 	public Pagamento getPagamento() {
